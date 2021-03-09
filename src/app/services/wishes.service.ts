@@ -10,6 +10,11 @@ export class WishesService {
 
   constructor() {
 
-    console.log("Servicio Inicializado");
+    const list1 = new List("Albums de música rock");
+    const list2 = new List("Albums de música jazz");
+
+    this.lists.push(list1,list2);
+
+    
   }
 }
