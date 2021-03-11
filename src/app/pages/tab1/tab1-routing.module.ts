@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   
   {
-    path: 'add',
+    path: 'add/:listaId',
     loadChildren: () => import('../add/add.module').then( m => m.AddPageModule)
   }
 ];

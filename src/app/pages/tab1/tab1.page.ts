@@ -18,7 +18,7 @@ export class Tab1Page {
   }
 
   async addList() {
-    //this.router.navigateByUrl('/tabs/tab1/add');
+  
     const alert = await this.alertCtrl.create ({
       header: 'Nueva lista',
       inputs: [
@@ -43,7 +43,9 @@ export class Tab1Page {
             if(data.title.length == 0) {
               return;
             } else {
-              this.wishesService.createList(data.title);
+              const listId = this.wishesService.createList(data.title);
+
+              this.router.navigateByUrl(`/tabs/tab1/add/${listId}`);
             }
           }
         }
