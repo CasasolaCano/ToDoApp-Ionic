@@ -44,4 +44,23 @@ export class AddPage implements OnInit {
 
   }
 
+  changeCheck(item:ItemList) {
+
+    const pendings = this.list.items.filter(itemData => !itemData.complete).length;
+
+    console.log({pendings});
+
+    if(pendings === 0) {
+      this.list.finishOn = new Date();
+      this.list.complete = true;
+    } else {
+      this.list.finishOn = null;
+      this.list.complete = false;
+    }
+
+    this.wishesService.saveStorage();
+
+    console.log(this.list);
+  }
+
 }
