@@ -13,13 +13,13 @@
 
     <ion-list color="dark">
         <ion-item color="dark">
-            <ion-label position="floating">New Album</ion-label>
+            <ion-label position="floating">New Item</ion-label>
             <ion-input [(ngModel)]="nameItem" type="text" (keyup.enter)="addItem()"></ion-input>
         </ion-item>
     </ion-list>
 
     <ion-list>
-        <ion-list-header color="dark">
+        <ion-list-header color="dark" *ngIf="list.items.length > 0">
             <ion-label>ToDo</ion-label>
         </ion-list-header>
 
