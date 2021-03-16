@@ -30,4 +30,10 @@ export class ListsComponent {
 
   }
 
+  deleteList(list:List) {
+
+    this.wishesService.deleteList(list);
+    
+  }
+
 }

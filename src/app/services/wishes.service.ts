@@ -23,6 +23,12 @@ export class WishesService {
     return newList.id;
   }
 
+  deleteList(list: List) {
+    this.lists = this.lists.filter(dataList => dataList.id !== list.id);
+
+    this.saveStorage();
+  }
+
   getList(id: string | number) : List {
 
     id = Number(id);
