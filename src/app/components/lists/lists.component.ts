@@ -10,7 +10,7 @@ import { WishesService } from '../../services/wishes.service';
 })
 export class ListsComponent {
 
-  @Input() terminada = true;
+  @Input() complete = true;
 
   constructor( public wishesService:WishesService, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class ListsComponent {
 
     const listId = list.id;
 
-    if(this.terminada) {
+    if(this.complete) {
 
       this.router.navigateByUrl(`/tabs/tab2/add/${listId}`);
 

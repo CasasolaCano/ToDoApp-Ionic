@@ -1,6 +1,6 @@
 <ion-list>
 
-    <ion-item-sliding *ngFor="let list of wishesService.lists">
+    <ion-item-sliding *ngFor="let list of wishesService.lists | filterComplete : complete">
 
         <ion-item detail color="dark" (click)="selectList(list)">
 
@@ -16,7 +16,5 @@
         </ion-item-options>
 
     </ion-item-sliding>
-
-
 
 </ion-list>
