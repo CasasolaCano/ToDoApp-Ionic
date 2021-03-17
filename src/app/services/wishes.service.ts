@@ -29,6 +29,12 @@ export class WishesService {
     this.saveStorage();
   }
 
+  editList(list: List, newName : string) {
+
+    list.title = newName;
+    this.saveStorage();
+  }
+
   getList(id: string | number) : List {
 
     id = Number(id);
@@ -52,4 +58,6 @@ export class WishesService {
     }
 
   }
+
+  
 }
